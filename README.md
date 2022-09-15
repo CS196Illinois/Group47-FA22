@@ -1,8 +1,14 @@
-# Group TEAM_NUMBER
+# Group 47
 Group Name: TEAM_NAME
 
-[MVP Link](http://cs196.cs.illinois.edu)
+[MVP Link](https://docs.google.com/document/d/1GiYt5gMb-NPdUFRy6pzUHJJdGcymHMAQreTZdyoDa6o/edit?usp=sharing)
 
-Team Members: STUDENTS_NETIDS
+Team Members: 
+- nowland2
+- theas2ep14
+- satish5
+- ac108
+- aashayd2
 
-Project Manager: PM_NETID
+
+Project Manager: sophiaz4
