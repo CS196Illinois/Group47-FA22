@@ -1,4 +1,4 @@
-# Group 47
+# 😛 Group 47 😛
 Group Name: TEAM_NAME
 
 [MVP Link](https://docs.google.com/document/d/1GiYt5gMb-NPdUFRy6pzUHJJdGcymHMAQreTZdyoDa6o/edit?usp=sharing)
