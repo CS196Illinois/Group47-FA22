@@ -12,3 +12,5 @@ Team Members:
 
 
 Project Manager: sophiaz4
+
+Project Description: [fill this out]
