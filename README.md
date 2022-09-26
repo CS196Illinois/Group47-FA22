@@ -13,7 +13,7 @@ Team Members:
 
 Project Manager: sophiaz4
 
-Project Description: [fill this out]
+Project Description: Our project is an ingredient decoder that will utilize computer vision to scan ingredient labels. Using information from a database about each ingredient, our website will allow users to sift through information about a selected ingredient. Information can include associated health risks or lesser-known facts. 
 
 Thea
 Banks
