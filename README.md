@@ -13,7 +13,10 @@ Team Members:
 
 Project Manager: sophiaz4
 
-Project Description: Our project is an ingredient decoder that will utilize computer vision to scan ingredient labels. Using information from a database about each ingredient, our website will allow users to sift through information about a selected ingredient. Information can include associated health risks or lesser-known facts. 
+Project Description: 
+
+Our project is a website that will scan a nutritional label, and provide helpful information and facts about the ingredients. To accomplish this we will use computer vision to process a photo of the label, web scraping to obtain information about the ingredients, databases to store this information, and a website front-end that will display the information in a neat and readable way. We plan on using Python for the majority of the project (computer vision, databases, data processing), react for the website, and javascript to connect them. Our end goal is to be able to take a photo of any nutritional label, and be given a list of health risks / facts about the ingredients.
+
 
 Thea
 Banks
