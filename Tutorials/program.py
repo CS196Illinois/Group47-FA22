@@ -6,6 +6,7 @@
 ## python3 -m pip --default-timeout=1000 install easyocr => will take a while 2:06
 ## pip: package manager for python packages 
 ## ocr: designed to read any kind of short text (https://www.jaided.ai/easyocr/documentation/)
+# easyocr documentation: (https://github.com/JaidedAI/EasyOCR)
 ## -m: 
 
 import easyocr
