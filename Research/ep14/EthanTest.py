@@ -1,12 +1,8 @@
 import easyocr
 import cv2
+import pytesseract
 
-# Read text from an image 
+# use easyocr to read the image
 reader = easyocr.Reader(['en'])
-results = reader.readtext('~/CS124 Project/Group47-FA22/Research/ep14/EthanTest.png')
-print(results)
-print(results[0])
-print(results[0][1])
-print("----------------")
-for element in results:
-  print(element[1])
+result = reader.readtext('~/EthanTest.png')
+print(result)
