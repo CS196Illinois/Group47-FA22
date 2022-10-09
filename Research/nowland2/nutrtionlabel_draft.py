@@ -7,7 +7,6 @@ Original file is located at
     https://colab.research.google.com/drive/14Fbk1Yz-l1cJbyOHyPHyQKO8587Nvr1z
 """
 
-#!pip install easyocr
 import easyocr
 import cv2
 
