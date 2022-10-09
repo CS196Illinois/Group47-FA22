@@ -1,0 +1,28 @@
+import cv2
+import pytesseract
+import os
+
+# use opencv to read the text from the image
+image = cv2.imread(os.path.join("Group47-FA22/Research/ep14/EthanTest.png"))
+gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+rawtext = pytesseract.image_to_string(gray, lang="eng").lower()
+print(rawtext)
+
+# isolate the ingredients section
+colonIndex = rawtext.index(":")
+periodIndex = rawtext[colonIndex:].index(".")
+ingredientsOnly = rawtext[colonIndex+2:colonIndex+periodIndex]
+print(ingredientsOnly)
+
+#remove filler words/symbols
+ingredientsOnly = ingredientsOnly.replace("*", "")
+ingredientsOnly = ingredientsOnly.replace("\n", " ")
+ingredientsOnly = ingredientsOnly.replace("™", "")
+ingredientsOnly = ingredientsOnly.replace(" and ", " ")
+
+#split by commas
+ingredientsList = ingredientsOnly.split(",")
+
+#remove leading and trailing whitespace from each ingredient
+ingredientsList = [ingredient.strip() for ingredient in ingredientsList]
+print(ingredientsList)
