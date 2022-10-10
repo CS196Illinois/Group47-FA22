@@ -16,7 +16,8 @@ ingredientsOnly = rawtext[colonIndex+2:colonIndex+periodIndex]
 ingredientsOnly = ingredientsOnly.replace("*", "")
 ingredientsOnly = ingredientsOnly.replace("\n", " ")
 ingredientsOnly = ingredientsOnly.replace("™", "")
-ingredientsOnly = ingredientsOnly.replace(" and ", " ")
+ingredientsOnly = ingredientsOnly.replace(", and ", ",")
+ingredientsOnly = ingredientsOnly.replace(" and ", ",")
 
 #split by commas
 ingredientsList = ingredientsOnly.split(",")
