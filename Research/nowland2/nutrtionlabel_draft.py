@@ -1,11 +1,19 @@
 #Working Python 3.9.6 (was having issues with 3.10 and reader not being able to use numpy)
 
+#Todo:
+
+#Pre processing image??
+
+import pytesseract
 import easyocr
 import cv2
 
+pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
 
 img = cv2.imread(r"Research\nowland2\content\nutritionlabel.png")
 # img1 = cv2.imread(r'Research\nowland2\content\nutritionlabel.png')
+
+
 reader = easyocr.Reader(['en'])
 
 results = reader.readtext(img)
@@ -71,9 +79,18 @@ def filteredPrint(str) :
   return filtered
 
 
+#Pytesseract
+# pytes = pytesseract.image_to_string(img) #Gives you a big string
+# print(pytes)
+
+
+
+#EasyOCR
+
 print("--------------------------------------------------")
 
 for element in results:
+  # print(element[1]) #prints raw text
 
   if element[2] > 0:
     ingredient = element[1].lower()
