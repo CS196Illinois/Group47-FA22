@@ -26,5 +26,5 @@ ingredientsList = ingredientsOnly.split(",")
 ingredientsList = [ingredient.strip() for ingredient in ingredientsList]
 
 for ingredient in ingredientsList:
-    #match the ingredient to the database
+    #match each ingredient to the database
     print("Ingredient: " + ingredient)
