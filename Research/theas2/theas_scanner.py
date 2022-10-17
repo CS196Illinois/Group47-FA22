@@ -23,13 +23,10 @@ for item in nutritionInfo:
       ingredients.append(item)
 
 # Prints the ingredients list in all lowercase 
-#for ingredient in ingredients:
-  #print(ingredient.lower())
-
-# Split by comma
 for ingredient in ingredients:
-  ingredientsSplit = ingredient.split(",")
-print(ingredientsSplit)
+  print(ingredient.lower())
+
+
 
 
 
