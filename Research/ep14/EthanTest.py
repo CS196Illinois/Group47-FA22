@@ -1,6 +1,7 @@
 import easyocr
 import cv2
 import pytesseract
+import os
 
 # use easyocr to read the image
 reader = easyocr.Reader(['en'])
@@ -9,8 +10,7 @@ reader = easyocr.Reader(['en'])
 # Possible solution: look for a period and once found, stop returning words
 # Problem with solution: easyocr is not identifying the periods
 
-#label = reader.readtext("/content/ingredients label 1.png")
-label = reader.readtext("EthanTest.png")
+label = reader.readtext("~/CS124Project/Group47-FA22/Research/ep14/nutrition label 1 max crop.png")
 print(label)
 # Construct a list of strings containing all the words on the label 
 wordBlocks = []
