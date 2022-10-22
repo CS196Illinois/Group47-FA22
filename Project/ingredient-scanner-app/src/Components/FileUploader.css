@@ -1,0 +1,14 @@
+.UploadButton {
+    background-color: #7CA168;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    border-radius: 25px;
+    padding: 20px;
+}
+
+/* *{
+    font-family:Algerian;
+} */
