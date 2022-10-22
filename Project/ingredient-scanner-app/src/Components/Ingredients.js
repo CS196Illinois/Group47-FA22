@@ -1,9 +1,9 @@
 import React from 'react'
-import './Ingredients.css'
+import './Ingredients.css';
 
 export default function Ingredients(props) {
   return (
-    <div className="ingredient">
+    <div className="ingredients">
       <span>{props.ingredient}</span> 
     </div>
   )

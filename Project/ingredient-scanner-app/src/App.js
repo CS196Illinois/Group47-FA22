@@ -1,8 +1,8 @@
 import './App.css';
+import './Components/Ingredients.css';
 import Home from './Pages/Home';
-import Ingredients from './Components/Ingredients'
-import IngredientsList from './Components/IngredientsList'
-import Title from './Components/Title';
+import IngredientsList from './Components/IngredientsList';
+
 
 const ingredients = [
   {id: 1, ingredient: "salt"},
