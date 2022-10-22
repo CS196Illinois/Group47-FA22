@@ -88,28 +88,37 @@ def filteredPrint(str) :
 #EasyOCR
 
 print("--------------------------------------------------")
+threshold = 0
 
 for element in results:
   # print(element[1]) #prints raw text
 
-  if element[2] > 0:
-    ingredient = element[1].lower()
+  if element[2] > threshold: 
+    ingredient = element[1].lower() #lowercase the ingredients
 
+    #Finding when the ingredients starts
     if "ingre" in ingredient:
       Ingredients = True
+
+    #Code that runs once it finds the ingredients
     if Ingredients:
 
+      #Take out commas, print surrounding words seperately
       if "," in ingredient:
         split = ingredient.split(",")
         for word in split:
           if word != "":
             filteredPrint(word)
+
+      #Take out the word 'and', and print surrounding words seperately
       elif "and" in ingredient:
         split = ingredient.split("and")
         for word in split:
           if word != "":
             filteredPrint(word)
+
+      #Print out word
       else:
         filteredPrint(ingredient)
-        #print(element[2])
+
 
