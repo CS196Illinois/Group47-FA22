@@ -1,6 +1,10 @@
-import React, {useRef, useEffect, useState} from "react";
+import React from 'react'
+import "./camera.css"
+import {useRef, useEffect, useState} from "react";
 
-function App() {
+
+export const Camera = () => {
+  
 	const videoRef = useRef(null);
 	const photoRef = useRef(null);
 
@@ -63,6 +67,5 @@ function App() {
 			</div>
 		</div>
 	);
-}
 
-export default App;
+}
