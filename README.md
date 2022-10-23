@@ -6,9 +6,8 @@ Group Name: TEAM_NAME
 Team Members: 
 - nowland2
 - theas2ep14
-- satish5
 - ac108
-- aashayd2
+
 
 
 Project Manager: sophiaz4
@@ -21,4 +20,3 @@ Our project is a website that will scan a nutritional label, and provide helpful
 Thea
 Banks
 Ethan
-Varun
