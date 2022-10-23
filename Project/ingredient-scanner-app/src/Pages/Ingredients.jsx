@@ -1,7 +1,4 @@
 import React from "react";
-import Title from "../Components/Title";
-import FileUploader from "../Components/FileUploader";
-import { Camera } from '../Components/Camera';
 import '../Components/Ingredients.css';
 import IngredientsList from '../Components/IngredientsList';
 
@@ -15,17 +12,11 @@ const ingredients = [
  
 
 
-export default function Home() {
+export default function Ingredients() {
   return (
     <div>
-      <Title />
-      <FileUploader />
-      {/* <IngredientsList ingredients={ingredients} /> */}
-      <Camera/>
+      <IngredientsList ingredients={ingredients} />
     </div>
   );
 }
-
-
-
 
