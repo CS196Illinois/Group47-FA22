@@ -1,0 +1,16 @@
+.TitleDiv {
+    padding: 5px;
+    text-align: center;
+    width: calc(100% - 115px);
+    font-size:300%;
+}
+.OuterDiv {
+    padding: 5px;
+    display: flex;
+    gap: ".5rem";
+}
+
+.LogoDiv {
+    padding: 5px;
+    padding-left: 10px;
+}

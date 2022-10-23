@@ -21,7 +21,7 @@ const FileUploader = (props) => {
     // add a handle file function to other component
 
     return (
-        <>
+        <div className = "UploadDiv">
             <button onClick={handleClick} className="UploadButton">
                 Upload Ingredients Image Here!
             </button>
@@ -31,7 +31,7 @@ const FileUploader = (props) => {
                 onChange={handleChange}
                 style={{ display: "none" }}
             />
-        </>
+        </div>
     );
 };
 export default FileUploader;
