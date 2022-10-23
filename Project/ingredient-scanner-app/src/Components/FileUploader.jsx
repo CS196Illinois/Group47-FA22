@@ -14,7 +14,8 @@ const FileUploader = (props) => {
     // to handle the user-selected file
     const handleChange = (event) => {
         const fileUploaded = event.target.files[0];
-        props.handleFile(fileUploaded);
+        console.log(event.target.files[0].name)
+        // props.handleFile(fileUploaded);
     };
 
     // file saved in fileUploaded
