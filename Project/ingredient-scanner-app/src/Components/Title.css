@@ -3,6 +3,7 @@
     text-align: center;
     width: calc(100% - 115px);
     font-size:300%;
+    color: white;
 }
 .OuterDiv {
     padding: 5px;

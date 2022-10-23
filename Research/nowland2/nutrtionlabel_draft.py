@@ -10,7 +10,8 @@ import cv2
 
 pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
 
-img = cv2.imread(r"Research\nowland2\content\nutritionlabel.png")
+# img = cv2.imread(r"Research\nowland2\content\nutritionlabel.png")
+img = cv2.imread(r"Research\nowland2\content\ingredients_label.jpg")
 # img1 = cv2.imread(r'Research\nowland2\content\nutritionlabel.png')
 
 
@@ -120,5 +121,8 @@ for element in results:
       #Print out word
       else:
         filteredPrint(ingredient)
+
+    if "vitamins" in ingredient:
+      Ingredients = False
 
 
