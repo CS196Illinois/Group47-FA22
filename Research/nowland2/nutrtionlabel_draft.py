@@ -4,11 +4,11 @@
 
 #Pre processing image??
 
-import pytesseract
+# import pytesseract
 import easyocr
 import cv2
 
-pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
+# pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
 
 img = cv2.imread(r"Research\nowland2\content\nutritionlabel.png")
 # img1 = cv2.imread(r'Research\nowland2\content\nutritionlabel.png')

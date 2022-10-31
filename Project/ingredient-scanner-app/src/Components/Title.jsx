@@ -2,6 +2,7 @@ import React from 'react'
 import logo from './ingredient_logo.png';
 import './Title.css';
 
+
 export default function Title() {
   return (
     <div className = "OuterDiv">
