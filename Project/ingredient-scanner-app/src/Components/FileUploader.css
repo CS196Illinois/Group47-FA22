@@ -1,21 +1,16 @@
-.UploadButton {
-    background-color: #7CA168;
+.VisibleUploadButton {
+    /* background-color: #7CA168;
     border: none;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 20px;
-    border-radius: 25px;
+    border-radius: 25px; */
+    position: relative;
+}
+
+.HiddenFileInput {
+    position: center;
     padding: 20px;
-    position: inherit;
+    
 }
-
-.UploadDiv {
-    padding: 5px;
-    padding-bottom: 15px;
-    text-align: center;
-}
-
-/* *{
-    font-family:Algerian;
-} */

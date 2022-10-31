@@ -1,10 +1,10 @@
 import React from 'react'
 import "./camera.css"
-import {useRef, useEffect, useState} from "react";
+import { useRef, useEffect, useState } from "react";
 
 
 export const Camera = () => {
-  
+
 	const videoRef = useRef(null);
 	const photoRef = useRef(null);
 
@@ -12,22 +12,22 @@ export const Camera = () => {
 
 	const getVideo = () => {
 		navigator.mediaDevices
-			.getUserMedia({ 
-					video: { width: 1920, height: 1080} 
-				})
-				.then(stream => {
-					let video = videoRef.current;
-					video.srcObject = stream;
-					video.play();
-				})
-				.catch(err => {
-					console.error(err);
-				})
+			.getUserMedia({
+				video: { width: 1920, height: 1080 }
+			})
+			.then(stream => {
+				let video = videoRef.current;
+				video.srcObject = stream;
+				video.play();
+			})
+			.catch(err => {
+				console.error(err);
+			})
 	}
 
 	const takePhoto = () => {
 		const width = 1920;
-		const height = width / (16/9);
+		const height = width / (16 / 9);
 
 		let video = videoRef.current;
 		let photo = photoRef.current;
@@ -45,7 +45,7 @@ export const Camera = () => {
 		let photo = photoRef.current;
 		let ctx = photo.getContext('2d');
 
-		ctx.clearRect(0,0,photo.width, photo.height);
+		ctx.clearRect(0, 0, photo.width, photo.height);
 
 		setHasPhoto(false);
 	}
@@ -56,12 +56,12 @@ export const Camera = () => {
 
 	return (
 		<div className="App">
-			<div className = "camera"> 
+			<div className="camera">
 				<video ref={videoRef}></video>
-				<button onClick = {takePhoto} >SNAP</button>
+				<button onClick={takePhoto} >SNAP</button>
 			</div>
-			<div className = {'result ' + (hasPhoto ? 'hasPhoto'
-			: '')}>
+			<div className={'result ' + (hasPhoto ? 'hasPhoto'
+				: '')}>
 				<canvas ref={photoRef}></canvas>
 				<button onClick={closePhoto} >CLOSE</button>
 			</div>
