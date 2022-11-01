@@ -27,7 +27,7 @@ const FileUploader = (props) => {
         ref={hiddenFileInput}
         onChange={handleChange}
         className = "HiddenFileInput"
-        style={{ display: "none" }}
+        // style={{ display: "none" }}
       />
       <button onClick={handleClick} className="VisibleUploadButton">
         Upload Ingredients Image Here!

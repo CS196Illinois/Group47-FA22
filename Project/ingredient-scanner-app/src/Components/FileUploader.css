@@ -6,7 +6,7 @@
     display: inline-block;
     font-size: 20px;
     border-radius: 25px; */
-    position: relative;
+    position: center;
 }
 
 .HiddenFileInput {
