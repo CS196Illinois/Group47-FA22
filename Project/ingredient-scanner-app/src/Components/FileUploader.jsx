@@ -14,6 +14,7 @@ const FileUploader = (props) => {
   // to handle the user-selected file
   const handleChange = (event) => {
     const fileUploaded = event.target.files[0];
+    var imageCaptured = true
     // props.handleFile(fileUploaded);
   };
 
@@ -21,17 +22,16 @@ const FileUploader = (props) => {
   // add a handle file function to other component
 
   return (
-    <div className="">
-      <input
-        type="file"
-        ref={hiddenFileInput}
-        onChange={handleChange}
-        className = "HiddenFileInput"
-        // style={{ display: "none" }}
-      />
-      <button onClick={handleClick} className="VisibleUploadButton">
-        Upload Ingredients Image Here!
-      </button>
+    <div>
+        <input
+          type="file"
+          ref={hiddenFileInput}
+          onChange={handleChange}
+          className="HiddenFileInput"
+        />
+        <button onClick={handleClick} className="VisibleUploadButton">
+          Upload Ingredients Image Here!
+        </button>
     </div>
   );
 };

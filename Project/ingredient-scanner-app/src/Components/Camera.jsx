@@ -39,6 +39,7 @@ export const Camera = () => {
 		ctx.drawImage(video, 0, 0, width, height);
 
 		setHasPhoto(true)
+		var imageCaptured = true
 	}
 
 	const closePhoto = () => {

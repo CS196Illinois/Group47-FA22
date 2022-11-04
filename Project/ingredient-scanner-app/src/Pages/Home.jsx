@@ -3,6 +3,7 @@ import Title from "../Components/Title";
 import FileUploader from "../Components/FileUploader";
 import { Camera } from "../Components/Camera";
 import "./Home.css";
+import Translate from "../Components/Translate";
 
 
 export default function Home() {
@@ -10,10 +11,10 @@ export default function Home() {
     <div>
       <Title />
       <div className="ImageComponents">
-        <div className = "FileUpload"> <FileUploader /> </div>
-        <div> <h1> Bruh text </h1> </div>
-        <div className = "Cam"> <Camera /> </div>
+        <FileUploader className="FileUploader" />
+        <Camera className="Camera" />
       </div>
+      <Translate />
     </div>
   );
 }
