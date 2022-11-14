@@ -13,7 +13,7 @@ def members():
     # return 1
 
 # Members API  Route
-@app.route("/Scanner")
+@app.route("/scanner")
 def scanner():
     scanner = Scanner()
     return scanner.scan()
