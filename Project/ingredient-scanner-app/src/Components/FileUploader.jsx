@@ -20,7 +20,6 @@ const FileUploader = (props) => {
 
     // file saved in fileUploaded
     // add a handle file function to other component
-
     return (
         <div className = "UploadDiv">
             <button onClick={handleClick} className="UploadButton">
