@@ -1,71 +1,71 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Fira Sans', sans-serif;
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Fira Sans', sans-serif;
 
- }
+}
 
- .App {
-    min-height: 100vh;
-    position: relative;
-    background-color: #313131;
- }
+.App {
+   min-height: 100vh;
+   position: relative;
+   background-color: #313131;
+}
 
- .camera {
-    position: relative;
- }
+.camera {
+   position: relative;
+   width: 50em;
+}
 
- .result {
-    position: fixed;
-    top: 0;
-    left: 100%;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    background-color: rgba(0,0,0,0.9);
-    transition: 0.4s;
- }
+.result {
+   position: fixed;
+   top: 0;
+   left: 100%;
+   height: 100%;
+   width: 100%;
+   display: flex;
+   align-items: center;
+   background-color: rgba(0, 0, 0, 0.9);
+   transition: 0.4s;
+}
 
- .result.hasPhoto{
-    left: 0;
- }
+.result.hasPhoto {
+   left: 0;
+}
 
- video {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
- }
+video {
+   width: 100%;
+   max-width: 100%;
+   height: auto;
+}
 
- button {
-    position: absolute;
-    bottom: 20px;
-    /* top: 20px; */
-    left: 20px;
+button {
+   position: absolute;
+   bottom: 20px;
+   /* top: 20px; */
+   left: 20px;
 
-    appearance: none;
-    border:none;
-    border-radius: 15px;
-    outline: none;
+   appearance: none;
+   border: none;
+   border-radius: 15px;
+   outline: none;
 
-    padding: 8px 16px;
-    background-image: linear-gradient(to right, #7CA168 50%, #506943 50%);
-    background-position: 0%;
-    background-size: 200%;
-    color: #FFF;
-    font-size: 24px;
-    font-weight: 700;
-    transition: 0.4s;
-    cursor: pointer;
- }
+   padding: 8px 16px;
+   background-image: linear-gradient(to right, #7CA168 50%, #506943 50%);
+   background-position: 0%;
+   background-size: 200%;
+   color: #FFF;
+   font-size: 24px;
+   font-weight: 700;
+   transition: 0.4s;
+   cursor: pointer;
+}
 
- button:hover {
-  background-position: 100%;
- }
+button:hover {
+   background-position: 100%;
+}
 
- canvas {
-  width: 100%;
-  height: auto;
- }
-  
+canvas {
+   width: 100%;
+   height: auto;
+}
