@@ -2,10 +2,10 @@ import React, { useState, useEffect } from 'react'
 
 function App() {
 
-  const [data, setData] = useState([{}])
+  const [data, setData] = useState([])
 
   useEffect(() => {
-    fetch("/members").then(
+    fetch("/scanner").then(
       res => res.json()
     ).then(
       data => {
@@ -17,10 +17,12 @@ function App() {
 
   return (
     <div>
-      {(typeof data.members === "undefined") ? (
+      {console.log(data)}
+      {(typeof data === "undefined") ? (
         <p>Loading...</p>
       ) : (
-        data.members.map((member, i) => (
+        data.map((member, i) => (
+          
           <p key = {i}>{member}</p>
         ))
       )}

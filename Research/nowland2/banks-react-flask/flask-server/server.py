@@ -16,7 +16,7 @@ def members():
 @app.route("/scanner")
 def scanner():
     scanner = Scanner()
-    return scanner.scan()
+    return scanner.testImage()
 
 if __name__ == "__main__":
     app.run(debug=True)
