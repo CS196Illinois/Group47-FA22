@@ -6,8 +6,10 @@ import numpy as np
 import cv2
 import re
 
-# pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
-pytesseract.pytesseract.tesseract_cmd = r'/usr/bin/tesseract'
+print(pytesseract)
+
+pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe' # Path of tesseract.exe (can't get it to work with the relative path of tesseract.exe in virutal environment)
+# pytesseract.pytesseract.tesseract_cmd = r'Project\venv\Scripts\pytesseract.exe'
 
 class Scanner:
     
