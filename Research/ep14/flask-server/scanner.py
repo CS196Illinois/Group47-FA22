@@ -3,12 +3,10 @@ import pytesseract
 import os
 
 class Scanner:
-    def scan(self, path): 
+    def scan(self, photo): 
         # use opencv to read the text from the image
-        print("Image Path is " + path)
-        photo = path
-        defaultfilepath = 'desmos_copy.png'
-        image = cv2.imread(path)
+        # defaultfilepath = 'desmos_copy.png'
+        image = cv2.imread(photo)
         gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
         rawtext = pytesseract.image_to_string(gray, lang="eng").lower()
 
