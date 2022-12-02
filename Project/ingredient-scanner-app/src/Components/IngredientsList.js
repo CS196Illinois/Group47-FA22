@@ -5,7 +5,9 @@ import './Ingredients.css';
 export default function IngredientsList(props) {
  return (
    <div>
-     {props.ingredients.map(i => <Ingredients key={i.id} ingredient={i.ingredient}/>)}
+    {/* {console.log(props)} */}
+    {props.ingredients.map(i => <Ingredients ingredient={i}/>)}
+
     
    </div>
  )

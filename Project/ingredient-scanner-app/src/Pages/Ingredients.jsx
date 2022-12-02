@@ -1,6 +1,7 @@
-import React from "react";
+
 import '../Components/Ingredients.css';
 import IngredientsList from '../Components/IngredientsList';
+import React, { useState, useEffect } from 'react'
 
 const ingredients = [
   { id: 1, ingredient: "salt" },
@@ -12,11 +13,37 @@ const ingredients = [
 
 
 
-export default function Ingredients() {
+function Ingredients() {
+  const [data, setData] = useState([])
+
+  useEffect(() => {
+    fetch("http://localhost:5000/scanner").then(
+      res => res.json()
+    ).then(
+      data => {
+        setData(data)
+        console.log(data)
+      }
+    )
+  }, [])
+
   return (
     <div>
-      <IngredientsList ingredients={ingredients} />
+      {console.log(data)}
+      {(typeof data === "undefined") ? (
+        console.log("Empty")
+      ) : (
+        
+        <div>
+          <IngredientsList ingredients={data} />
+          {console.log(data)}
+        </div>
+        
+      )}
+
     </div>
-  );
+  )
 }
+
+export default Ingredients
 

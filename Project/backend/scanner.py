@@ -1,19 +1,14 @@
 
 # %%
 from PIL import Image
-import pytesseract
+import pytesseract #(can't get it to work with the relative path of tesseract.exe in virutal environment)
 import numpy as np
 import cv2
 import re
 
-print(pytesseract)
-
-# pytesseract.pytesseract.tesseract_cmd = r'C:\Users\Banks\Desktop\CS124H\Group47-FA22\Project\venv\Scripts\pytesseract.exe' # Copy full path of pytesseract.exe inside scripts or bin folder
-# tessdata_dir_config = r'--tessdata-dir "C:\Users\Banks\Desktop\CS124H\Group47-FA22\Project\venv\Scripts\pytesseract.exe"'
-pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe' # Path of tesseract.exe (can't get it to work with the relative path of tesseract.exe in virutal environment)
-
-
-# pytesseract.pytesseract.tesseract_cmd = r'Project\venv\Scripts\pytesseract.exe'
+pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe' # Path of tesseract.exe on your local computer (you'll have to install it outside the VEM) 
+#NOT WORKING
+# pytesseract.pytesseract.tesseract_cmd = r'C:\Users\Banks\Desktop\CS124H\Group47-FA22\Project\backend\Scripts\pytesseract.exe' # Copy full path of pytesseract.exe inside scripts or bin folder
 
 class Scanner:
     
