@@ -8,16 +8,22 @@ import ImageUploader from "../Components/ImageUploader";
 import IngredientsList from "../Components/IngredientsList.js";
 
 
-export default function Home() {
+export default function Home(props) {
+
+  const changeListCallback = (newList) => {
+    props.changeListCallback(newList);
+  }
+
   return (
     <div>
       <Title />
       <div className="ImageComponents">
-        <FileUploader className="FileUploader" />
+        {/* <FileUploader className="FileUploader" /> */}
+        <ImageUploader className="FileUploader" changeListCallback={changeListCallback}/>
         <Camera className="Camera" />
       </div>
       <Translate />
-      <ImageUploader />
+      
       {/* <IngredientsList /> */}
     </div>
   );

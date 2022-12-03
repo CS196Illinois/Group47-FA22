@@ -6,7 +6,7 @@ import axios from 'axios';
 
 const ingredientsData = ["salt", "canola oil", "raspberry", "anatto", "milk"];
 
-export default function IngredientsList() {
+export default function IngredientsList(props) {
 
   // let ingredMethod = getIngredientsList();
   // const [ingredos, setIngredos] = useState([{}])
@@ -42,7 +42,7 @@ export default function IngredientsList() {
 
   return (
     <div>
-      {/* {props.ingredients.map(i => <Ingredients ingredient={i} />)} */}
+      {props.list.map(i => <Ingredients ingredient={i} />)}
       {/* {console.log(props)}
       <p> {props.list} </p> */}
       {/* <IngredientsContext.Consumer>

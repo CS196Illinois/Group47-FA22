@@ -1,0 +1,12 @@
+
+.SubmitButton {
+    position: relative;
+    top: 25%;
+    margin-left: 0;
+    padding: 20px;
+    flex-grow: 4;
+}
+
+/* .HiddenFileInput {
+    display: none;
+} */

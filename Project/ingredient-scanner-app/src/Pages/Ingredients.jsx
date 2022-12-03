@@ -8,7 +8,7 @@ import Child1 from '../Components/Child1'
 
 const ingredientsData = ["salt", "canola oil", "raspberry", "anatto", "milk"];
 
-export default function Ingredients() {
+export default function Ingredients(props) {
   return (
     <div>
       {/* {console.log("INGREDIENTS LIST: " + getIngredientsList())} */}
@@ -24,7 +24,7 @@ export default function Ingredients() {
         
       )} */ }
 
-      <IngredientsList/>
+      <IngredientsList list={props.list}/>
       {/* <Child1/> */}
     </div>
   )

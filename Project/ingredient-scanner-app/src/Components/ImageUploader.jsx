@@ -8,7 +8,12 @@ import IngredientsList from "./IngredientsList.js"
 
 let INGREDIENTS_LIST = ["Default"];
 
-export default function ImageUploader(){
+export default function ImageUploader(props){
+
+    const changeListCallback = (newList) => {
+        props.changeListCallback(newList);
+    }
+
     const [postImage, setPostImage] = useState({
         myFile: "",
     });
@@ -18,6 +23,7 @@ export default function ImageUploader(){
     .then(function (response) {
         console.log("Image Uploader Response: " + response.data)
         INGREDIENTS_LIST = response.data
+        props.changeListCallback(INGREDIENTS_LIST)
         });
 
     const createPost = async (post) => {
@@ -51,6 +57,10 @@ export default function ImageUploader(){
         setPostImage({ ...postImage, myFile: base64 });
     };
 
+    const handleDrill = (e) => {
+        props.changeListCallback(["Chocolate", "Cake", "Flour"])
+    }
+
     return (
         <div>
             <form onSubmit={handleSubmit}>
@@ -60,10 +70,12 @@ export default function ImageUploader(){
                     name="myFile"
                     accept=".jpeg, .png, .jpg"
                     onChange={(e) => handleFileUpload(e)}
+                    // style={{ display: 'none'}}
                 />
 
-                <button>Submito</button>
+                <button className="SubmitButton">Submito</button>
             </form>
+            {/* <button onClick={handleDrill}> Drill Upwards </button> */}
             {/* <IngredientsContext.Provider value={'LIST GOES HEREEEEE'}>
             <IngredientsList/>
             </IngredientsContext.Provider> */}
