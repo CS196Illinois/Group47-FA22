@@ -1,6 +1,5 @@
 import cv2
 import pytesseract
-import os
 
 class Scanner:
     def scan(self, photo): 
@@ -13,9 +12,7 @@ class Scanner:
         # isolate the ingredients section
         colonIndex = rawtext.find(":")
         periodIndex = rawtext[colonIndex:].find(".")
-        print(rawtext)
         ingredientsOnly = rawtext[colonIndex+2:colonIndex+periodIndex]
-        print(ingredientsOnly)
 
         #remove filler words/symbols
         #ingredientsOnly = ingredientsOnly.replace("*", "")
@@ -43,6 +40,3 @@ class Scanner:
         if (lastCutoff != -1):
             del ingredientsList[lastCutoff+1:]
         return ingredientsList
-        #for ingredient in ingredientsList:
-            #match each ingredient to the database
-            #print("Ingredient: " + ingredient)
