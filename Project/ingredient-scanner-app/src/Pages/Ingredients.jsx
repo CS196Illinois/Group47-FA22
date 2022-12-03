@@ -2,48 +2,31 @@
 import '../Components/Ingredients.css';
 import IngredientsList from '../Components/IngredientsList';
 import React, { useState, useEffect } from 'react'
+import getIngredientsList from '../Components/ImageUploader';
+import ComponentOne from '../Components/ImageUploader';
+import Child1 from '../Components/Child1'
 
-const ingredients = [
-  { id: 1, ingredient: "salt" },
-  { id: 2, ingredient: "canola oil" },
-  { id: 3, ingredient: "raspberry" },
-  { id: 4, ingredient: "anatto" },
-  { id: 5, ingredient: "milk" }
-];
+const ingredientsData = ["salt", "canola oil", "raspberry", "anatto", "milk"];
 
-
-
-function Ingredients() {
-  const [data, setData] = useState([])
-
-  useEffect(() => {
-    fetch("http://localhost:5000/scanner").then(
-      res => res.json()
-    ).then(
-      data => {
-        setData(data)
-        console.log(data)
-      }
-    )
-  }, [])
-
+export default function Ingredients() {
   return (
     <div>
-      {console.log(data)}
-      {(typeof data === "undefined") ? (
-        console.log("Empty")
+      {/* {console.log("INGREDIENTS LIST: " + getIngredientsList())} */}
+      { /* {(typeof props.list === "undefined") ? (
+        // console.log("Empty")
+        <p>Empty</p>
       ) : (
-        
-        <div>
-          <IngredientsList ingredients={data} />
-          {console.log(data)}
+        <div> 
+          <h1>Ingredients2</h1>
+          { <IngredientsList ingredients={props.list} /> }
+          <IngredientsList ingredients={ingredientsData} />
         </div>
         
-      )}
+      )} */ }
 
+      <IngredientsList/>
+      {/* <Child1/> */}
     </div>
   )
 }
-
-export default Ingredients
 

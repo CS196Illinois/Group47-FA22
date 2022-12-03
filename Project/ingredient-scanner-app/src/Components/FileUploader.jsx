@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useState, createContext } from "react";
+import axios from "axios";
+import IngredientsList from "./IngredientsList.js"
 import "./FileUploader.css";
 
 const FileUploader = (props) => {
@@ -14,6 +16,7 @@ const FileUploader = (props) => {
   // to handle the user-selected file
   const handleChange = (event) => {
     const fileUploaded = event.target.files[0];
+    console.log("OG UPLOADER: " + fileUploaded)
     var imageCaptured = true
     // props.handleFile(fileUploaded);
   };

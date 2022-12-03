@@ -4,6 +4,8 @@ import FileUploader from "../Components/FileUploader";
 import { Camera } from "../Components/Camera";
 import "./Home.css";
 import Translate from "../Components/Translate";
+import ImageUploader from "../Components/ImageUploader";
+import IngredientsList from "../Components/IngredientsList.js";
 
 
 export default function Home() {
@@ -15,6 +17,8 @@ export default function Home() {
         <Camera className="Camera" />
       </div>
       <Translate />
+      <ImageUploader />
+      {/* <IngredientsList /> */}
     </div>
   );
 }
